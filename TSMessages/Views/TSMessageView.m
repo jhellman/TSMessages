@@ -171,8 +171,8 @@ static NSMutableDictionary *_notificationDesign;
                                                    alpha:1.0];
         
         
-        self.textSpaceLeft = 2 * TSMessageViewPadding;
-        if (image) self.textSpaceLeft += image.size.width + 2 * TSMessageViewPadding;
+        self.textSpaceLeft = TSMessageViewPadding;
+        if (image) self.textSpaceLeft += image.size.width + TSMessageViewPadding;
         
         // Set up title label
         _titleLabel = [[UILabel alloc] init];
@@ -224,7 +224,7 @@ static NSMutableDictionary *_notificationDesign;
         if (image)
         {
             _iconImageView = [[UIImageView alloc] initWithImage:image];
-            self.iconImageView.frame = CGRectMake(TSMessageViewPadding * 2,
+            self.iconImageView.frame = CGRectMake(TSMessageViewPadding,
                                                   TSMessageViewPadding,
                                                   image.size.width,
                                                   image.size.height);
